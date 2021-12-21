@@ -1,3 +1,8 @@
-# Calculator-main
+# Frontend Mentor - Calculator app solution
 
-A calculator web application
+This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [mk-calculator.netlify.app](https://mk-calculator.netlify.app)
