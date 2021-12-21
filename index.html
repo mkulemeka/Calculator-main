@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body>
+
+  <!-- Author : Mtendere Kulemeka -->
+  <main>
+    <section class="calculator">
+      <div class="contents">
+        <div id='theme_num_container'>
+          <ul class="theme-numbers">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </div>
+        <div class="heading">
+          <div class="title">
+            <h3 id='title'>calc</h3>
+          </div>
+          <div class="theme_container">
+            <div>
+              <h6 id='theme'>THEME</h6>
+            </div>
+            <div class="toggle">
+              <div class="theme-toggle">
+                <label class="radio-btn">
+                  <input id="first" name="toggle-state" type="radio" checked />
+                  <span class="wrapper"></span>
+                </label>
+  
+                <label class="radio-btn">
+                  <input id="second" name="toggle-state" type="radio" />
+                  <span class="wrapper"></span>
+                </label>
+  
+                <label class="radio-btn">
+                  <input id="third" name="toggle-state" type="radio" />
+                  <span class="wrapper"></span>
+                </label>
+             </div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <div id="display_panel"></div>
+        </div>
+        <div class="button-container">
+          <div class="button_area">
+            <button class="button numbers" id='btn7' value='7'>7</button>
+            <button class="button numbers" id='btn8' value='8'>8</button>
+            <button class="button numbers" id='btn9' value='9'>9</button>
+            <button class="button" id='btn_Del' value='Del'>Del</button>
+            <button class="button numbers" id='btn4' value='4'>4</button>
+            <button class="button numbers" id='btn5' value='5'>5</button>
+            <button class="button numbers" id='btn6' value='6'>6</button>
+            <button class="button" id='btn_Plus' value='+'>+</button>
+            <button class="button numbers" id='btn1' value='1'>1</button>
+            <button class="button numbers" id='btn2' value='2'>2</button>
+            <button class="button numbers" id='btn3' value='3'>3</button>
+            <button class="button" id='btn_Minus' value='-'>-</button>
+            <button class="button" id='btn_Dot' value='.'>.</button>
+            <button class="button numbers" id='btn0' value='0'>0</button>
+            <button class="button" id='btn_Divide' value='/'>/</button>
+            <button class="button" id='btn_Multiply' value='*'>*</button>
+            <button class="button" id='btn_Reset' value='Reset'>Reset</button>
+            <button class="button numbers" id='btn_Equals' value='='>=</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>

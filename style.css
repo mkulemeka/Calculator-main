@@ -1,0 +1,275 @@
+/*********** Author: Mtendere Kulemeka ***********/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Spartan:wght@700&display=swap');
+:root {
+
+    /*********** THEME 1 ***********/
+    /* Backgrounds */
+    --main-bg: hsl(222, 26%, 31%); 
+    --toggle-keypad-bg: hsl(223, 31%, 20%); /*toggle and keypad background*/
+    --screen-bg: hsl(224, 36%, 15%);
+
+    /***** Keys Color *****/
+    --reset-del-bg: hsl(225, 21%, 49%);
+    --reset-del-shadow: hsl(224, 28%, 35%);
+    --equal-toggle-bg: hsl(6, 63%, 50%);
+    --equal-toggle-shadow: hsl(6, 70%, 34%);
+    --key-bg: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+
+    /***** Text *****/
+    --display-text: hsl(0, 0%, 100%);
+    --equal-text: hsl(0, 0%, 100%);
+    --key-text: hsl(221, 14%, 31%);
+    --heading-text: hsl(0, 0%, 100%);
+    --text-white: hsl(0, 0%, 100%);
+
+    /*********** TYPOGRAPHY ***********/
+    /* Font Size (Numbers)*/
+    --font-size: 2rem;
+
+    /* Font Family*/
+    --font-family: 'Spartan', 'Open Sans', sans-serif;
+
+    /* Font Weight */
+    --font-weight: 700;
+
+    /* Universal Border-radius */
+    --border-radius-uni: 0.3125rem;
+}
+
+.theme-2 {
+    /*********** THEME 2 ***********/
+   /* Backgrounds */
+   --main-bg: hsl(0, 0%, 90%); 
+   --toggle-keypad-bg: hsl(0, 5%, 81%); /*toggle and keypad background*/
+   --screen-bg: hsl(0, 0%, 93%);
+
+   /***** Keys Color *****/
+   --reset-del-bg: hsl(185, 42%, 37%);
+   --reset-del-shadow: hsl(185, 58%, 25%);
+   --equal-toggle-bg: hsl(25, 98%, 40%);
+   --equal-toggle-shadow: hsl(25, 99%, 27%);
+   --key-bg: hsl(45, 7%, 89%);
+   --key-shadow: hsl(35, 11%, 61%);
+
+   /***** Text *****/
+   --display-text: hsl(0, 100%, 0%);
+   --equal-text: hsl(0, 0%, 100%);
+   --heading-text: hsl(0, 100%, 0%);
+   --key-text: hsl(60, 10%, 19%);
+}
+
+.theme-3 {
+   /*********** THEME 3 ***********/
+   /* Backgrounds */
+   --main-bg: hsl(268, 75%, 9%); 
+   --toggle-keypad-bg: hsl(268, 71%, 12%); /*toggle and keypad, and screen background*/
+   --screen-bg: hsl(268, 71%, 12%);
+
+   /***** Keys Color *****/
+   --reset-del-bg: hsl(281, 89%, 26%);
+   --reset-del-shadow: hsl(285, 91%, 52%);
+   --equal-toggle-bg: hsl(176, 100%, 44%);
+   --equal-toggle-shadow: hsl(177, 92%, 70%);
+   --key-bg: hsl(268, 47%, 21%);
+   --key-shadow: hsl(290, 70%, 36%);
+
+   /***** Text *****/
+   --display-text: hsl(52, 100%, 62%);
+   --equal-text: hsl(0, 100%, 0%);
+   --heading-text: hsl(52, 100%, 62%);
+   --key-text: hsl(52, 100%, 62%);
+   --text-dark-blue : hsl(198, 20%, 13%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-bg);
+}
+
+.calculator {
+    width: 80%;
+    height: auto;
+}
+
+.contents > div {
+    padding-bottom: 1rem
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    color: var(--heading-text);
+    position: relative;
+}
+
+.theme_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme_container h6 {
+    margin: 0 0.8rem 0 0;
+    font-size: 0.5rem;
+}
+
+#theme_num_container {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--text-white);
+    padding-bottom: 0;
+}
+
+.theme-numbers {
+    list-style: none;
+    display: flex;
+    font-size: 0.5rem;
+    color: var(--heading-text)
+}
+
+.theme-numbers li {
+    padding: 0 0.5rem;
+}
+
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 20px;
+    padding: 0 3px;
+    background: var(--toggle-keypad-bg);
+}
+
+.theme-toggle .radio-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+}
+
+.theme-toggle .radio-btn input {
+    display: none;
+    margin: 0.3em;
+}
+
+.radio-btn .wrapper {
+    display: inline-block;
+    width: calc(100% - 0.6rem);
+    height: calc(100% - 0.6rem);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.radio-btn input:checked + .wrapper {
+    opacity: 1;
+    display: inline-block;
+}
+
+.wrapper {
+    cursor: pointer;
+}
+
+.display #display_panel {
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: var(--screen-bg);
+    border: 1px solid transparent;
+    border-radius: 0.3125rem;
+    color: var(--display-text);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+}
+
+.display #display_panel:focus {
+    outline: none;
+}
+
+.button_area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: var(--toggle-keypad-bg);
+    border-radius: 0.3125rem;
+}
+
+.button_area .button {
+    width: 100%;
+    height: auto;
+    border: 0px solid transparent;
+    border-radius: var(--border-radius-uni);
+    background-color: var(--key-bg);
+    box-shadow: 0px 2.5px 0px 0px var(--key-shadow);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: var(--font-weight);
+    color: var(--key-text);
+}
+
+.button_area .numbers {
+    font-size: var(--font-size);
+    font-weight: 500;
+}
+
+#btn_Equals {
+    color: var(--equal-text);
+    font-weight: 400;
+}
+
+#btn_Equals, .wrapper {
+    background: var(--equal-toggle-bg);
+}
+
+#btn_Reset, #btn_Del {
+    color: var(--text-white);
+    font-weight: 400;
+}
+
+#btn_Del, #btn_Reset  {
+    background: var(--reset-del-bg);
+    box-shadow: 0px 2.5px 0px 0px var(--reset-del-shadow);
+}
+
+#btn_Reset, #btn_Equals {
+    width: 100%;
+    grid-column: span 2;
+}
+
+.button_area #btn_Equals {
+    background: var(--equal-toggle-bg);
+    box-shadow: 0px 2.5px 0px 0px var(--equal-toggle-shadow);
+}
+
+@media screen and (min-width: 768px) {
+
+    .calculator {
+        width: 25%;
+        height: auto;
+    }
+
+    .button_area {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
