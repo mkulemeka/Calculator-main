@@ -9,11 +9,11 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ### Built with
 
--CSS Grid & Flexbox
--Mobile-first
--HTML
--CSS
--JQuery
+- CSS Grid & Flexbox
+- Mobile-first
+- HTML
+- CSS
+- JQuery
 
 ## Author
 
